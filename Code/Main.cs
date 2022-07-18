@@ -16,9 +16,9 @@ namespace NoMoreHungry
     public class Main : BaseUnityPlugin
     {
 
-        public const string pluginGuid = "horhorou.stacklands.noMoreHungry";
-        public const string pluginName = "No more hungry";
-        public const string pluginVersion = "1.0.0.0";
+        public const string pluginGuid = "horhorou.stacklands.noMoreHunger";
+        public const string pluginName = "No more hunger";
+        public const string pluginVersion = "1.0.1.0";
 
 
 

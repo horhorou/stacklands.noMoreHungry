@@ -31,14 +31,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
+    <Reference Include="0Harmony, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>libs\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp">
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>libs\Assembly-CSharp.dll</HintPath>
     </Reference>
-    <Reference Include="BepInEx">
+    <Reference Include="BepInEx, Version=5.4.19.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>libs\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="GameScripts">
+      <HintPath>libs\GameScripts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,10 +54,12 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine">
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>libs\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.CoreModule">
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>libs\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>

@@ -18,7 +18,7 @@ namespace NoMoreHungry
 
         public const string pluginGuid = "horhorou.stacklands.noMoreHunger";
         public const string pluginName = "No more hunger";
-        public const string pluginVersion = "1.0.1.0";
+        public const string pluginVersion = "1.0.2";
 
 
 
@@ -32,17 +32,20 @@ namespace NoMoreHungry
         private void InitializeMod()
         {
             Harmony harmony = new Harmony(pluginGuid);
-            MethodInfo original = AccessTools.Method(typeof(Villager), "GetRequiredFoodCount");
-            MethodInfo patched = AccessTools.Method(typeof(Main), "GetRequiredFoodCount_Patched");
 
-            harmony.Patch(original, new HarmonyMethod(patched));
+            MethodInfo originalHungerMethod = AccessTools.Method(typeof(WorldManager), "GetCardRequiredFoodCount");
+            MethodInfo prefixPatch = AccessTools.Method(typeof(Main), "GetCardRequiredFoodCount_Patched");
+
+
+            harmony.Patch(originalHungerMethod, null, new HarmonyMethod(prefixPatch));
         }
 
 
-        public static bool GetRequiredFoodCount_Patched()
+        public static void GetCardRequiredFoodCount_Patched(ref int __result)
         {
-            return false;
+            __result = 0;
         }
+
 
     }
 }
